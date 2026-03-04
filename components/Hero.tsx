@@ -1,5 +1,5 @@
 import React from 'react';
-import profileImage from '../moe-profile.jpg';
+import profileImage from '../omar-profile.png';
 import { trackConversion } from '../utils/analytics';
 
 const Hero: React.FC = () => {
@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
               <div className="relative w-full h-full rounded-full overflow-hidden border border-border-subtle bg-bg-elevated transition-transform duration-300 group-hover:scale-105">
                 <img
                   alt="Mohammad El Saheb"
-                  className="w full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-center"
                   src={profileImage}
                 />
               </div>
@@ -54,8 +54,8 @@ const Hero: React.FC = () => {
                 <span>Get in Touch</span>
               </button>
               <a
-                href="Mohammed-M.-ElSaheb-CV.pdf"
-                download="Mohammed El Saheb CV.pdf"
+                href="Mohammed M. ElSaheb CV - 19.0.pdf"
+                download
                 onClick={handleCVDownload}
                 className="inline-flex items-center gap-2 text-text-secondary hover:text-accent text-sm font-medium transition-colors duration-300 py-3"
               >

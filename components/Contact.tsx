@@ -179,7 +179,7 @@ const Contact: React.FC = () => {
 
               <div className="space-y-5">
                 <a
-                  href="tel:+966506871951"
+                              href="tel:+962792001771"
                   className="flex items-center gap-4 group"
                   onClick={() => trackEngagement('contact_phone_click')}
                 >
@@ -188,12 +188,12 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-xs text-text-muted mb-0.5">Phone</p>
-                    <p className="text-sm text-text-primary">+966 50 687 1951</p>
+                                  <p className="text-sm text-text-primary">+962 79 200 1771</p>
                   </div>
                 </a>
 
                 <a
-                  href="mailto:ewies.pm@gmail.com"
+                              href="mailto:mohammed_alsaheb@hotmail.com"
                   className="flex items-center gap-4 group"
                   onClick={() => trackEngagement('contact_email_click')}
                 >
@@ -202,7 +202,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-xs text-text-muted mb-0.5">Email</p>
-                    <p className="text-sm text-text-primary">ewies.pm@gmail.com</p>
+                                  <p className="text-sm text-text-primary">mohammed_alsaheb@hotmail.com</p>
                   </div>
                 </a>
 
@@ -212,7 +212,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-xs text-text-muted mb-0.5">Location</p>
-                    <p className="text-sm text-text-primary">Riyadh, Saudi Arabia</p>
+                                  <p className="text-sm text-text-primary">Amman, Jordan</p>
                   </div>
                 </div>
 
@@ -222,7 +222,7 @@ const Contact: React.FC = () => {
                   <p className="text-xs text-text-muted uppercase tracking-wider mb-4">Connect</p>
                   <div className="flex gap-3">
                     <a
-                      href="mailto:ewies.pm@gmail.com"
+                                  href="mailto:mohammed_alsaheb@hotmail.com"
                       className="size-11 rounded-xl bg-bg-surface border border-border-subtle flex items-center justify-center text-text-secondary hover:bg-accent hover:border-accent hover:text-white transition-all duration-300"
                       title="Email"
                       onClick={() => trackEngagement('contact_email_click')}
@@ -230,7 +230,7 @@ const Contact: React.FC = () => {
                       <span className="material-symbols-outlined text-lg">mail</span>
                     </a>
                     <a
-                      href="tel:+966506871951"
+                                  href="tel:+962792001771"
                       className="size-11 rounded-xl bg-bg-surface border border-border-subtle flex items-center justify-center text-text-secondary hover:bg-accent hover:border-accent hover:text-white transition-all duration-300"
                       title="Call"
                       onClick={() => trackEngagement('contact_phone_click')}
@@ -238,7 +238,7 @@ const Contact: React.FC = () => {
                       <span className="material-symbols-outlined text-lg">call</span>
                     </a>
                     <a
-                      href="https://wa.me/966506871951"
+                                  href="https://wa.me/962792001771"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="size-11 rounded-xl bg-bg-surface border border-border-subtle flex items-center justify-center text-text-secondary hover:bg-[#25D366] hover:border-[#25D366] hover:text-white transition-all duration-300"

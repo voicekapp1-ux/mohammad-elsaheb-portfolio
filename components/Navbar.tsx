@@ -22,7 +22,6 @@ const Navbar: React.FC = () => {
     };
 
     const observer = new IntersectionObserver(observerCallback, observerOptions);
-
     navItems.forEach((item) => {
       const element = document.getElementById(item.toLowerCase());
       if (element) {
@@ -60,9 +59,8 @@ const Navbar: React.FC = () => {
             onClick={handleLogoClick}
             className="hidden md:block text-lg font-semibold text-text-primary hover:text-accent transition-colors duration-300"
           >
-            Omar Ewies
+            Mohammad M. Elsaheb
           </button>
-
           {/* Nav items - centered on mobile, right-aligned on desktop */}
           <div className="flex items-center gap-6 md:gap-8">
             {navItems.map((item) => (
@@ -78,18 +76,14 @@ const Navbar: React.FC = () => {
                 {item}
               </button>
             ))}
-
             <a
-              href="cv-omar-ewies.pdf"
-              download="Omar_Ewies_CV.pdf"
+              href="Mohammed M. ElSaheb CV - 19.0.pdf"
+              download
               onClick={handleCVDownload}
-              className="hidden md:flex relative overflow-hidden bg-accent hover:bg-accent-muted text-white px-5 py-2.5 rounded-lg text-sm font-medium transition-colors duration-300"
+              className="hidden md:flex items-center gap-1.5 bg-accent hover:bg-accent-muted text-white px-3 py-1.5 rounded text-xs font-medium transition-colors duration-300"
             >
-              <span className="relative z-10 flex items-center gap-2">
-                <span className="material-symbols-outlined text-base">download</span>
-                Download CV
-              </span>
-              <div className="absolute inset-0 -translate-x-full animate-shimmer bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+              <span className="material-symbols-outlined text-sm">download</span>
+              Download CV
             </a>
           </div>
         </div>

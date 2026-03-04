@@ -4,8 +4,8 @@ import BottomTabBar from './components/BottomTabBar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Experience from './components/Experience';
-import Projects from './components/Projects';
 import Skills from './components/Skills';
+import Projects from './components/Projects';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -16,7 +16,6 @@ function App() {
   const [currentView, setCurrentView] = useState<'portfolio' | 'dashboard'>('portfolio');
 
   useEffect(() => {
-    // Check URL hash for dashboard
     const hash = window.location.hash;
     if (hash === '#dashboard') {
       setCurrentView('dashboard');
@@ -24,8 +23,6 @@ function App() {
       setCurrentView('portfolio');
       trackPageView();
     }
-
-    // Listen for hash changes
     const handleHashChange = () => {
       const newHash = window.location.hash;
       if (newHash === '#dashboard') {
@@ -35,9 +32,7 @@ function App() {
         trackPageView();
       }
     };
-
     window.addEventListener('hashchange', handleHashChange);
-
     return () => {
       window.removeEventListener('hashchange', handleHashChange);
     };
@@ -53,11 +48,11 @@ function App() {
 
   return (
     <div className="min-h-screen bg-bg-base text-text-primary selection:bg-accent/30 selection:text-white overflow-x-clip">
-      {/* Mobile CV Download Banner - above navbar, scrolls away */}
+      {/* Mobile CV Download Banner */}
       <div className="md:hidden">
         <a
-          href="cv-omar-ewies.pdf"
-          download="Omar_Ewies_CV.pdf"
+          href="Mohammed-M.-ElSaheb-CV.pdf"
+          download="Mohammed El Saheb CV.pdf"
           onClick={handleCVDownload}
           className="relative flex items-center justify-center gap-2 w-full bg-accent hover:bg-accent-muted text-white py-2.5 text-xs font-medium transition-colors duration-300 overflow-hidden"
         >

@@ -50,7 +50,6 @@ const Hero: React.FC = () => {
                 onClick={handleGetInTouchClick}
                 className="inline-flex items-center gap-2.5 bg-accent hover:bg-accent-muted text-white font-medium px-6 py-3.5 rounded-lg text-sm transition-all duration-300 w-full sm:w-auto justify-center"
               >
-                <span className="material-symbols-outlined text-lg">handshake</span>
                 <span>Get in Touch</span>
               </button>
               <a
@@ -59,7 +58,6 @@ const Hero: React.FC = () => {
                 onClick={handleCVDownload}
                 className="inline-flex items-center gap-2 text-text-secondary hover:text-accent text-sm font-medium transition-colors duration-300 py-3"
               >
-                <span className="material-symbols-outlined text-lg">download</span>
                 <span>Download CV</span>
               </a>
             </div>

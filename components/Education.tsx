@@ -21,6 +21,12 @@ const certificationData: CertificationItem[] = [
   { id: '7', title: 'Lean Six Sigma White Belt', issuer: 'Aveta Business Institute (2021)' },
   { id: '8', title: 'Digital Marketing', issuer: 'Google (2020)' },
   { id: '9', title: 'Jira & Confluence Fundamentals', issuer: 'Atlassian University (2022)' }
+    { id: '10', title: 'Product-led Certification', issuer: 'Pendo.io (2025)' },
+  { id: '11', title: 'Generative AI Overview for Project Managers', issuer: 'PMI (2025)' },
+  { id: '12', title: 'Arabian Agile Essentials Certification', issuer: 'Arabian Agile Professionals (2025)' },
+  { id: '13', title: 'User Experience Design Fundamentals', issuer: 'IBM (2024)' },
+  { id: '14', title: 'Fundamentals of Agile Project Management', issuer: 'PMI (2024)' },
+  { id: '15', title: 'Project Management Fundamentals', issuer: 'IBM (2024)' },
 ];
 
 const VISIBLE_CERTS = 4;

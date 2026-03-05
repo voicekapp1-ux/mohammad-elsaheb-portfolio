@@ -32,8 +32,8 @@ jobs:
       - name: Copy PDF to dist
         run: |
           cp "Mohammed M. ElSaheb CV - 19.0.pdf" dist/ 2>/dev/null || true
-          cp cv-omar-ewies.pdf dist/ 2>/dev/null || true
-
+                  cp "Mohammed elsaheb - Profile Photo.png" dist/ 2>/dev/null || true
+          
       - name: Setup Pages
         uses: actions/configure-pages@v4
 

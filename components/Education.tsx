@@ -35,10 +35,10 @@ const certificationData: CertificationItem[] = [
   { id: '15', title: 'Digital Marketing', issuer: 'Google (2020)' },
 ];
 
-const VISIBLE_CERTS = 4;
+const VISIBLE_CERTS = 8;
 
 const Education: React.FC = () => {
-    const [showAllCerts, setShowAllCerts] = useState(true);
+  const [showAllCerts, setShowAllCerts] = useState(false);
   const visibleCerts = showAllCerts ? certificationData : certificationData.slice(0, VISIBLE_CERTS);
 
   return (
@@ -46,52 +46,48 @@ const Education: React.FC = () => {
       <div className="max-w-w-[960px] mx-auto">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-20">
           {/* Education */}
-          <div className="lg:w-1/2">
+          <div className="lg:w-1/3">
             <p className="text-xs font-medium uppercase tracking-wider text-accent mb-3">Education</p>
-            <h2 className="text-2xl md:text-3xl font-semibold mb-10 text-text-primary">Academic Background</h2>
-
-            <div className="space-y-8">
-              {educationData.map((item, index) => (
-                <div key={item.id} className="relative pl-8 border-l-2 border-border-subtle">
-                  <div className={`absolute -left-[9px] top-1 size-4 rounded-full border-4 border-bg-elevated ${index === 0 ? 'animate-pulse-dot' : ''}`}></div>
-                  <h4 className="text-base font-semibold text-text-primary mb-1">{item.degree}</h4>
-                  <p className="text-accent text-sm mb-1">{item.institution}</p>
-                  <p className="text-text-muted text-xs">{item.year}</p>
-                </div>
-              ))}
-            </div>
+            <h2 className="text-2xl font-bold text-text-primary mb-8">Academic Background</h2>
+            {educationData.map((item) => (
+              <div key={item.id} className="relative pl-5 border-l-2 border-border">
+                <p className="font-semibold text-text-primary text-sm leading-snug">{item.degree}</p>
+                <p className="text-accent text-sm mt-1">{item.institution}</p>
+                <p className="text-text-muted text-xs mt-0.5">{item.year}</p>
+              </div>
+            ))}
           </div>
 
           {/* Certifications */}
-          <div className="lg:w-1/2">
+          <div className="lg:w-2/3">
             <p className="text-xs font-medium uppercase tracking-wider text-accent mb-3">Credentials</p>
-            <h2 className="text-2xl md:text-3xl font-semibold mb-10 text-text-primary">Certifications</h2>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <h2 className="text-2xl font-bold text-text-primary mb-8">Certifications</h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
               {visibleCerts.map((cert) => (
                 <div
                   key={cert.id}
-                  className="bg-bg-surface border border-border-subtle p-4 rounded-xl flex items-start gap-3 hover:border-accent/30 transition-all duration-300"
+                  className="bg-bg-card border border-border rounded-lg p-3 flex items-start gap-2"
                 >
-                  <span className="material-symbols-outlined text-accent text-lg mt-0.5 flex-shrink-0">verified</span>
+                  <span className="text-accent mt-0.5 flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                      <polyline points="22 4 12 14.01 9 11.01"/>
+                    </svg>
+                  </span>
                   <div>
-                    <p className="font-medium text-sm text-text-primary leading-snug">{cert.title}</p>
-                    <p className="text-xs text-text-muted mt-1">{cert.issuer}</p>
+                    <p className="text-text-primary text-xs font-medium leading-snug">{cert.title}</p>
+                    <p className="text-text-muted text-xs mt-0.5">{cert.issuer}</p>
                   </div>
                 </div>
               ))}
             </div>
-            {certificationData.length > VISIBLE_CERTS && (
-              <button
-                onClick={() => setShowAllCerts(!showAllCerts)}
-                className="mt-4 inline-flex items-center gap-1.5 text-xs text-text-secondary hover:text-accent transition-colors duration-200"
-              >
-                <span className="material-symbols-outlined text-sm">
-                  {showAllCerts ? 'expand_less' : 'expand_more'}
-                </span>
-                {showAllCerts ? 'Show less' : `Show ${certificationData.length - VISIBLE_CERTS} more`}
-              </button>
-            )}
+            <button
+              onClick={() => setShowAllCerts(!showAllCerts)}
+              className="mt-4 text-sm text-text-muted hover:text-text-primary flex items-center gap-1 transition-colors"
+            >
+              <span>{showAllCerts ? '\u2303' : '\u2304'}</span>
+              <span>{showAllCerts ? 'Show less' : `View more (${certificationData.length - VISIBLE_CERTS})`}</span>
+            </button>
           </div>
         </div>
       </div>

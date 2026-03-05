@@ -36,10 +36,7 @@ const Hero: React.FC = () => {
               <div className="inline-block text-accent text-xs font-medium uppercase tracking-wider">
                 <span className="inline-block text-accent text-xs font-medium uppercase tracking-wider">Senior Technical Product Manager</span>
               </div>
-                            {/* Open to Work Badge */}
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-xs font-medium">
-                <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse-dot"></span>
-                Open to Work
+              
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1] tracking-tight text-text-primary">
                 Mohammad El Saheb

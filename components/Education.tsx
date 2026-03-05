@@ -24,6 +24,7 @@ const certificationData: CertificationItem[] = [
   { id: '10', title: 'Master Course in Business Analysis', issuer: 'Udemy (2023)' },
   { id: '11', title: 'Product Management Framework and Methodology', issuer: 'Udemy (2023)' },
   { id: '12', title: 'Jira and Confluence Fundamentals', issuer: 'Atlassian University (2022)' },
+  
   { id: '13', title: 'Oracle Eloqua Certification', issuer: 'Oracle (2021)' },
   { id: '14', title: 'Lean Six Sigma White Belt', issuer: 'Aveta Business Institute (2021)' },
   { id: '15', title: 'Digital Marketing', issuer: 'Google (2020)' },

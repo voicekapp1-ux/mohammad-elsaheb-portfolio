@@ -29,17 +29,24 @@ const certificationData: CertificationItem[] = [
   { id: '15', title: 'Digital Marketing', issuer: 'Google (2020)' },
 ];
 
+const CheckIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+    <polyline points="22 4 12 14.01 9 11.01" />
+  </svg>
+);
+
 const VISIBLE = 12;
 
 const Education: React.FC = () => {
   const [showAll, setShowAll] = useState(false);
   const visible = showAll ? certificationData : certificationData.slice(0, VISIBLE);
+  const remaining = certificationData.length - VISIBLE;
 
   return (
     <section id="education" className="py-12 md:py-16 px-6 bg-bg-elevated">
       <div className="max-w-[1100px] mx-auto">
 
-        {/* Education - full width */}
         <div className="mb-12">
           <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-2">Education</p>
           <h2 className="text-3xl font-bold text-text-primary mb-8">Academic Background</h2>
@@ -52,22 +59,15 @@ const Education: React.FC = () => {
           ))}
         </div>
 
-        {/* Credentials heading - full width */}
         <div className="mb-6">
           <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-2">Credentials</p>
           <h2 className="text-3xl font-bold text-text-primary">Certifications</h2>
         </div>
 
-        {/* 4-column certifications grid - full width */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {visible.map((cert) => (
             <div key={cert.id} className="bg-bg-card border border-border rounded-xl p-4 flex items-start gap-3">
-              <span className="text-accent mt-0.5 flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                  <polyline points="22 4 12 14.01 9 11.01" />
-                </svg>
-              </span>
+              <span className="text-accent mt-0.5 flex-shrink-0"><CheckIcon /></span>
               <div>
                 <p className="text-text-primary text-sm font-semibold leading-snug">{cert.title}</p>
                 <p className="text-text-muted text-xs mt-1">{cert.issuer}</p>
@@ -76,14 +76,11 @@ const Education: React.FC = () => {
           ))}
         </div>
 
-        {certificationData.length > VISIBLE && (
+        {remaining > 0 && (
           <button
             onClick={() => setShowAll(!showAll)}
             className="mt-6 text-sm text-text-muted hover:text-text-primary flex items-center gap-1 transition-colors"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              {showAll ? <polyline points="18 15 12 9 6 15" /> : <polyline points="6 9 12 15 18 9" />}
-            </svg>
             <span>{showAll ? 'Show less' : 'Show more'}</span>
           </button>
         )}

@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 
 const About: React.FC = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setIsVisible(true); },
+      { threshold: 0.1 }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section id="about" className="py-6 nd:py-12 px-6 bg-bg-base">
+    <section ref={sectionRef} id="about" className={`py-6 nd:py-12 px-6 bg-bg-base transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
       <div className="max-w-[960px] mx-auto">
         <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-start">
           {/* Left column */}
@@ -49,6 +60,10 @@ const About: React.FC = () => {
               <div>
                 <h4 className="text-3xl md:text-4xl font-semibold text-accent mb-1">50+</h4>
                 <p className="text-xs text-text-muted uppercase tracking-wider">Enterprise Clients</p>
+              </div>
+              <div>
+                <h4 className="text-3xl md:text-4xl font-semibold text-accent mb-1">20+</h4>
+                <p className="text-xs text-text-muted uppercase tracking-wider">Products Launched</p>
               </div>
             </div>
           </div>

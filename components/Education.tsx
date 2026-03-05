@@ -26,7 +26,7 @@ const certificationData: CertificationItem[] = [
 const VISIBLE_CERTS = 4;
 
 const Education: React.FC = () => {
-  const [showAllCerts, setShowAllCerts] = useState(false);
+    const [showAllCerts, setShowAllCerts] = useState(true);
   const visibleCerts = showAllCerts ? certificationData : certificationData.slice(0, VISIBLE_CERTS);
 
   return (

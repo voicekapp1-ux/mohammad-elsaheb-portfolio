@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
               <div className="absolute inset-0 rounded-full border border-border-subtle scale-[1.08] opacity-50"></div>
               <div className="relative w-full h-full rounded-full overflow-hidden border border-border-subtle bg-bg-elevated transition-transform duration-300 group-hover:scale-105">
                 <img
-                  alt="Mohammad El Saheb"
+                                    alt="Mohammad M. ElSaheb"
                   className="w-full h-full object-cover object-center"
                   src={profileImage}
                 />
@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1] tracking-tight text-text-primary">
-                Mohammad El Saheb
+                                Mohammad M. ElSaheb
               </h1>
               <p className="text-base md:text-lg leading-relaxed text-text-secondary max-w-lg mx-auto md:mx-0">
                 13 years driving product strategy across MarTech, AdTech, EdTech &amp; SaaS. +40% user engagement, -25% dev cycles, enterprise solutions across MENA &amp; US markets.
